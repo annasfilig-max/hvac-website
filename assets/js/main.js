@@ -201,7 +201,7 @@
 (function(){
   const ABS_BASE = 'https://hvac.websitepreviewjtm.com';
   const SLUG_MAP = {
-    '/home': '/home-1879',
+    
     '/service-areas': '/serviceareas',
     '/post-1': '/blogpost1',
     '/post-2': '/blogpost2',
