@@ -846,3 +846,6 @@ img { max-width: 100%; height: auto; display: block; }
 /* 404 */
 .err-wrap { padding: 6rem 0; text-align: center; }
 .err-wrap .big { font-size: clamp(5rem, 20vw, 10rem); font-family: var(--font-heading); font-weight: 700; color: var(--color-primary); line-height: 1; }
+
+/* Hide skip-to-content link per Naz */
+.skip-link { display: none !important; }
