@@ -861,3 +861,23 @@ body{margin:0!important;padding:0!important}
   .hero{padding:3rem 0!important}
   .page-hero{padding:2rem 0 1.5rem!important}
 }
+
+/* === GHL embed: kill all top gap, tighten banner on mobile === */
+html,body{margin:0!important;padding:0!important;overflow-x:hidden!important}
+#jtm-promo-banner{margin:0!important;padding:0.5rem 0.75rem!important;font-size:0.8125rem!important;line-height:1.3!important}
+#jtm-promo-banner svg{width:14px!important;height:14px!important}
+@media (max-width:640px){
+  #jtm-promo-banner{padding:0.5rem 0.625rem!important;gap:0.5rem!important}
+  #jtm-promo-banner span span:last-child{display:none!important}
+  #jtm-promo-banner button{width:24px!important;height:24px!important;font-size:1rem!important}
+}
+.site-header{padding:0.5rem 0!important}
+@media (max-width:640px){
+  .site-header .header-inner{padding:0.5rem 0!important;gap:0.5rem!important}
+  .hero{min-height:auto!important;padding:2rem 1rem!important}
+  .hero h1{font-size:1.875rem!important;line-height:1.15!important}
+  .page-hero{padding:1.5rem 1rem!important}
+  .page-hero h1{font-size:1.875rem!important}
+}
+/* Eliminate any GHL wrapper top spacing */
+[class*="hl_page-preview"],[id^="section-"],[class^="row-"],[class^="col-"]{margin-top:0!important;padding-top:0!important}
