@@ -849,3 +849,15 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Hide skip-to-content link per Naz */
 .skip-link { display: none !important; }
+
+/* Tighten layout for GHL embed — kill GHL section padding, reduce hero overflow */
+.hl_page-preview--content,
+[id^="section-"],
+[class^="section-"]{padding-top:0!important;margin-top:0!important;padding-bottom:0!important}
+body{margin:0!important;padding:0!important}
+.page-hero{padding-top:3rem!important;padding-bottom:3rem!important}
+.hero{min-height:auto!important;height:auto!important;padding:5rem 0!important}
+@media (max-width:768px){
+  .hero{padding:3rem 0!important}
+  .page-hero{padding:2rem 0 1.5rem!important}
+}
