@@ -209,3 +209,17 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
   else mount();
 })();
+
+/* Rewrite internal /path links to absolute domain URLs (so nav works on the GHL Preview HVAC published site) */
+(function(){
+  const ABS_BASE = 'https://hvac.websitepreviewjtm.com';
+  function fixLinks(){
+    document.querySelectorAll('a[href^="/"]').forEach(function(a){
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('//') || href.startsWith('/preview-hvac')) return;
+      a.setAttribute('href', ABS_BASE + href);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixLinks);
+  else fixLinks();
+})();
