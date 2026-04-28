@@ -197,28 +197,27 @@
 
 
 
-/* Rewrite internal /path links to absolute domain URLs with correct GHL slugs */
+
+/* Click-interceptor: redirect mismatched-slug links to correct GHL URLs immediately on click */
 (function(){
   const ABS_BASE = 'https://hvac.websitepreviewjtm.com';
   const SLUG_MAP = {
-    
     '/service-areas': '/serviceareas',
     '/post-1': '/blogpost1',
     '/post-2': '/blogpost2',
     '/post-3': '/blogpost3'
   };
-  function fixLinks(){
-    document.querySelectorAll('a[href^="/"]').forEach(function(a){
-      let href = a.getAttribute('href');
-      if (!href || href.startsWith('//') || href.startsWith('/preview-hvac')) return;
-      // separate path from hash
-      const hashIdx = href.indexOf('#');
-      const path = hashIdx >= 0 ? href.slice(0, hashIdx) : href;
-      const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
-      const mapped = SLUG_MAP[path] || path;
-      a.setAttribute('href', ABS_BASE + mapped + hash);
-    });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixLinks);
-  else fixLinks();
+  document.addEventListener('click', function(e){
+    const a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || !href.startsWith('/') || href.startsWith('//') || href.startsWith('/preview-hvac')) return;
+    const hashIdx = href.indexOf('#');
+    const path = hashIdx >= 0 ? href.slice(0, hashIdx) : href;
+    const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
+    if (SLUG_MAP[path]) {
+      e.preventDefault();
+      window.location.href = ABS_BASE + SLUG_MAP[path] + hash;
+    }
+  }, true);
 })();
