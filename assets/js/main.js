@@ -194,3 +194,18 @@
   const y = document.querySelector('[data-year]');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* "This website could be yours" promo banner — dismissible per session */
+(function(){
+  if (sessionStorage.getItem('jtmBannerClosed')) return;
+  function mount(){
+    const bar = document.createElement('div');
+    bar.id = 'jtm-promo-banner';
+    bar.innerHTML = '<span style="font-weight:500">This website could be yours.</span> <a href="https://jtmarketing.live" target="_blank" rel="noopener" style="color:#ffd89b;text-decoration:underline;font-weight:600;margin-left:0.5rem">Get yours →</a><button aria-label="Close" style="background:transparent;border:0;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;padding:0 0.5rem;margin-left:auto">×</button>';
+    Object.assign(bar.style, {position:'sticky',top:'0',left:'0',right:'0',background:'linear-gradient(90deg,#0a3d62,#1e5a8a)',color:'#fff',padding:'0.625rem 1rem',display:'flex',alignItems:'center',justifyContent:'center',gap:'0.75rem',zIndex:'200',fontSize:'0.875rem',fontFamily:'Inter,system-ui,sans-serif',boxShadow:'0 2px 8px rgba(0,0,0,0.1)'});
+    bar.querySelector('button').onclick = () => { bar.remove(); sessionStorage.setItem('jtmBannerClosed','1'); };
+    document.body.prepend(bar);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
+  else mount();
+})();
