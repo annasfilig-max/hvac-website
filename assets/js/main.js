@@ -210,14 +210,27 @@
   else mount();
 })();
 
-/* Rewrite internal /path links to absolute domain URLs (so nav works on the GHL Preview HVAC published site) */
+
+/* Rewrite internal /path links to absolute domain URLs with correct GHL slugs */
 (function(){
   const ABS_BASE = 'https://hvac.websitepreviewjtm.com';
+  const SLUG_MAP = {
+    '/home': '/home-1879',
+    '/service-areas': '/serviceareas',
+    '/post-1': '/blogpost1',
+    '/post-2': '/blogpost2',
+    '/post-3': '/blogpost3'
+  };
   function fixLinks(){
     document.querySelectorAll('a[href^="/"]').forEach(function(a){
-      const href = a.getAttribute('href');
+      let href = a.getAttribute('href');
       if (!href || href.startsWith('//') || href.startsWith('/preview-hvac')) return;
-      a.setAttribute('href', ABS_BASE + href);
+      // separate path from hash
+      const hashIdx = href.indexOf('#');
+      const path = hashIdx >= 0 ? href.slice(0, hashIdx) : href;
+      const hash = hashIdx >= 0 ? href.slice(hashIdx) : '';
+      const mapped = SLUG_MAP[path] || path;
+      a.setAttribute('href', ABS_BASE + mapped + hash);
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixLinks);
