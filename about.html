@@ -13,9 +13,6 @@
 <meta property="og:image" content="https://yourdomain.com/assets/images/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -24,52 +21,52 @@
 </script>
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to content</a>
+<!-- ================= JT MARKETING PROMO BANNER ================= -->
+<div id="jtm-promo-banner" role="note" aria-label="Preview by JT Marketing">
+  <span class="jtm-promo-inner">
+    <svg class="jtm-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.4 20 12 16.7 6.6 20 8 13.4 3 9l6.4-.7L12 2z"/></svg>
+    <span class="jtm-promo-text">This site could be yours.</span>
+    <span class="jtm-promo-sep" aria-hidden="true"></span>
+    <span class="jtm-promo-credit">Built by <b>JT Marketing</b></span>
+  </span>
+  <button type="button" class="jtm-close" aria-label="Dismiss" onclick="this.parentElement.style.display='none'">&times;</button>
+</div>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="[Your Company Name] home">
-      <span class="logo-name">[Your Company Name]</span><span class="logo-tag">Heating · Cooling · Comfort</span>
+      <span class="logo-name">[Your Company Name]</span>
+      <span class="logo-tag">Heating &middot; Cooling &middot; Air Quality</span>
     </a>
-    <nav class="nav-main" aria-label="Primary"><ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" aria-current="page">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="service-areas.html">Service Areas</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="testimonials.html">Reviews</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
+    <nav class="nav-main" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
     <div class="header-cta">
       <a href="tel:[Phone Number]" class="header-phone">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         [Phone Number]
       </a>
-      <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
     </div>
     <button class="hamburger" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
 </header>
 
+<!-- ================= MOBILE MENU ================= -->
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
-  <div class="mobile-menu-head"><span class="logo-name">[Your Company Name]</span>
+  <div class="mobile-menu-head">
+    <span class="logo-name">[Your Company Name]</span>
     <button class="hamburger" data-menu-close aria-label="Close menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button></div>
-  <nav aria-label="Mobile primary"><ul>
-    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li>
-    <li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li>
-    <li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></nav>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
   <div class="mobile-menu-footer">
-    <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
-    <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+    <a href="tel:[Phone Number]" class="btn btn-outline-white">Call [Phone Number]</a>
+    <a href="quote.html" class="btn btn-primary">Free Quote</a>
   </div>
 </div>
 
@@ -77,141 +74,192 @@
 
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> › About</div>
-    <h1>About [Your Company Name]</h1>
-    <p style="color:rgba(255,255,255,0.85);max-width:640px;margin:0.5rem auto 0;">A locally owned HVAC company built on referrals, workmanship, and doing right by the neighbors we serve.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</div>
+    <h1>About<br><em style="color:var(--orange);font-style:normal;">[Your Company Name]</em></h1>
+    <p style="color:rgba(255,255,255,0.78);max-width:580px;margin:1rem 0 0;font-size:1.0625rem;">A family-owned HVAC company built on referrals, workmanship, and doing right by the neighbors we serve since [Year Founded].</p>
   </div>
 </section>
 
+<!-- ================= STORY (editorial 2-col) ================= -->
+<section class="about-strip">
+  <div class="container" style="max-width:none;padding:0;">
+    <div class="grid-2">
+      <div class="col-img" style="background-image:url('assets/images/our-story.jpg'); min-height:520px;"></div>
+      <div class="col-body">
+        <span class="eyebrow">01 / Our Story</span>
+        <h2>Started With One Truck<br>And A Handshake.</h2>
+        <p class="lead" style="color:var(--ink-soft);">When we opened our doors in [Year Founded], it was a small crew, one truck, and the belief that homeowners deserved straightforward answers and work that held up.</p>
+        <p style="color:var(--ink-soft);">More trucks, more technicians, more families trusting us with their comfort &mdash; the crew got bigger, the standard didn't change. Every job is still priced up front, done by a trained tech, and backed by a guarantee that's as good as our word.</p>
+        <p style="color:var(--ink-soft);">Today we're proud to serve [Service Region]. Even prouder that most of our new customers come to us because a neighbor sent them our way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section" style="padding:0;">
+  <div class="container" style="padding:0;max-width:none;">
+    <div class="stats-row" style="border-top:0;">
+      <div class="stat" style="padding:2.5rem 1.5rem;"><span class="stat-num">[YR]<sup>+</sup></span><span class="stat-label">Years Family-Owned</span></div>
+      <div class="stat" style="padding:2.5rem 1.5rem;"><span class="stat-num">4,800<sup>+</sup></span><span class="stat-label">Homes Serviced</span></div>
+      <div class="stat" style="padding:2.5rem 1.5rem;"><span class="stat-num">12</span><span class="stat-label">NATE-Certified Techs</span></div>
+      <div class="stat" style="padding:2.5rem 1.5rem;"><span class="stat-num">4.9<sup>★</sup></span><span class="stat-label">Avg Google Rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUES ================= -->
 <section class="section">
-  <div class="container grid-2">
-    <div class="fade-in">
-      <span class="eyebrow">Our Story</span>
-      <h2>Founded in [Year Founded] on a Simple Idea.</h2>
-      <p>When we opened our doors in [Year Founded], it was with a small crew, one truck, and the belief that homeowners deserved straightforward answers and work that held up. That hasn't changed.</p>
-      <p>Over the years we've grown — more trucks, more technicians, more families trusting us with their comfort. What hasn't changed is the standard: every job is priced up front, done by a trained technician, and backed by a workmanship guarantee that's as good as our handshake.</p>
-      <p>Today we're proud to serve homes across [Service Region] and even prouder that most of our new customers come to us because a neighbor sent them our way.</p>
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">02 / What We Stand For</span>
+      <h2>Three Standards.<br>No Exceptions.</h2>
+      <span class="meta">Since [Year]</span>
     </div>
-    <div class="fade-in">
-      <img src="assets/images/our-story.jpg" alt="Company owner in polo shirt standing confidently in front of fleet of vans at shop" style="border-radius:var(--radius-card);box-shadow:var(--shadow-card);">
+    <div class="grid-3">
+      <article class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Honest Quotes</h3>
+        <p style="color:var(--ink-soft);">Flat rates before we touch a tool. The number on the invoice matches the number we said. If we can't fix it, we tell you. If we can, we show you how.</p>
+      </article>
+      <article class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Clean Work</h3>
+        <p style="color:var(--ink-soft);">Tight joins. Labelled wiring. Lines run straight. The work you don't see is what keeps your system running 15 years instead of 8.</p>
+      </article>
+      <article class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3>Respect The Home</h3>
+        <p style="color:var(--ink-soft);">Boots off or shoe covers on. Drop cloths. Mess hauled. We treat every home the way we'd want someone to treat ours.</p>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- ================= TEAM ================= -->
 <section class="section section-alt">
   <div class="container">
-    <div class="text-center mb-2">
-      <span class="eyebrow">Our Mission & Values</span>
-      <h2>What We Stand For.</h2>
+    <div class="sec-head">
+      <span class="idx">03 / The Crew</span>
+      <h2>The People<br>Behind The Work.</h2>
+      <span class="meta">12 Techs &middot; 0 Subcontractors</span>
     </div>
-    <div class="grid-3 mt-3">
-      <article class="card fade-in">
-        <div class="icon-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Integrity</h3>
-        <p class="text-muted">We quote flat rates before we touch a tool — so there are no "surprises" on the invoice. If we can't fix it, we'll tell you. If we can, we'll show you how.</p>
-      </article>
-      <article class="card fade-in">
-        <div class="icon-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Quality Workmanship</h3>
-        <p class="text-muted">Tight joins. Clean wiring. Labels where they belong. The work you don't see matters as much as the work you do — because it's what keeps your system reliable for years.</p>
-      </article>
-      <article class="card fade-in">
-        <div class="icon-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Customer-First</h3>
-        <p class="text-muted">Shoe covers. Drop cloths. A technician who actually listens. We treat every home the way we'd want someone to treat ours.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="text-center mb-2">
-      <span class="eyebrow">Meet the Team</span>
-      <h2>The People Behind the Work.</h2>
-    </div>
-    <div class="team-grid mt-3">
-      <div class="team-card fade-in">
-        <img src="assets/images/team-1.jpg" alt="Woman technician headshot, navy polo, smiling">
-        <h3>[Owner Name]</h3>
-        <div class="role">Founder & Owner</div>
-        <p class="text-muted" style="font-size:0.9375rem;">Started the company in [Year Founded] and still shows up on the big jobs.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="assets/images/team-1.jpg" alt="[Owner Name] portrait">
+        <h4>[Owner Name]</h4>
+        <div class="role">Founder &amp; Owner</div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);margin-top:0.5rem;">Started the company in [Year Founded] and still shows up on the big jobs. Master HVAC license #[XXX].</p>
       </div>
-      <div class="team-card fade-in">
-        <img src="assets/images/team-2.jpg" alt="Female team member headshot, navy shirt, smiling">
-        <h3>[Lead Tech Name]</h3>
+      <div class="team-card">
+        <img src="assets/images/team-2.jpg" alt="[Lead Tech Name] portrait">
+        <h4>[Lead Tech Name]</h4>
         <div class="role">Lead Technician</div>
-        <p class="text-muted" style="font-size:0.9375rem;">Known for the cleanest installs in the region. Trains every new tech on the crew.</p>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);margin-top:0.5rem;">Known for the cleanest installs in the region. Trains every new tech on the crew. NATE-certified.</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/team-3.jpg" alt="[Service Manager Name] portrait" onerror="this.style.display='none'">
+        <h4>[Service Manager]</h4>
+        <div class="role">Service Manager</div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);margin-top:0.5rem;">Runs dispatch &mdash; the reason your call gets answered in under 60 seconds.</p>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/team-4.jpg" alt="[Senior Tech Name] portrait" onerror="this.style.display='none'">
+        <h4>[Senior Technician]</h4>
+        <div class="role">Senior Technician</div>
+        <p style="font-size:0.9375rem;color:var(--ink-soft);margin-top:0.5rem;">15 years on the trucks. Specializes in heat pumps and tricky diagnostics.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
+<!-- ================= CERTIFICATIONS ================= -->
+<section class="section">
   <div class="container">
-    <div class="text-center mb-2">
-      <span class="eyebrow">Certifications & Affiliations</span>
-      <h2>Accredited Where It Matters.</h2>
+    <div class="sec-head">
+      <span class="idx">04 / Credentials</span>
+      <h2>Accredited Where<br>It Matters.</h2>
+      <span class="meta">Lic #[License #]</span>
     </div>
-    <div class="logo-strip mt-3">
-      <img src="https://placehold.co/200x80/e1e8ed/5a6a7a?text=Logo+1" alt="Certification logo one">
-      <img src="https://placehold.co/200x80/e1e8ed/5a6a7a?text=Logo+2" alt="Certification logo two">
-      <img src="https://placehold.co/200x80/e1e8ed/5a6a7a?text=Logo+3" alt="Certification logo three">
-      <img src="https://placehold.co/200x80/e1e8ed/5a6a7a?text=Logo+4" alt="Certification logo four">
-      <img src="https://placehold.co/200x80/e1e8ed/5a6a7a?text=Logo+5" alt="Certification logo five">
-      <img src="https://placehold.co/200x80/e1e8ed/5a6a7a?text=Logo+6" alt="Certification logo six">
+    <div class="logo-strip">
+      <div style="font-family:var(--font-heading);font-weight:900;color:var(--ink);font-size:0.875rem;letter-spacing:0.04em;text-align:center;line-height:1.2;">NATE<br><span style="font-family:var(--font-mono);font-size:0.625rem;font-weight:600;letter-spacing:0.1em;color:var(--ink-soft);">CERTIFIED</span></div>
+      <div style="font-family:var(--font-heading);font-weight:900;color:var(--ink);font-size:0.875rem;letter-spacing:0.04em;text-align:center;line-height:1.2;">EPA 608<br><span style="font-family:var(--font-mono);font-size:0.625rem;font-weight:600;letter-spacing:0.1em;color:var(--ink-soft);">UNIVERSAL</span></div>
+      <div style="font-family:var(--font-heading);font-weight:900;color:var(--ink);font-size:0.875rem;letter-spacing:0.04em;text-align:center;line-height:1.2;">BBB A+<br><span style="font-family:var(--font-mono);font-size:0.625rem;font-weight:600;letter-spacing:0.1em;color:var(--ink-soft);">ACCREDITED</span></div>
+      <div style="font-family:var(--font-heading);font-weight:900;color:var(--ink);font-size:0.875rem;letter-spacing:0.04em;text-align:center;line-height:1.2;">ENERGY STAR<br><span style="font-family:var(--font-mono);font-size:0.625rem;font-weight:600;letter-spacing:0.1em;color:var(--ink-soft);">PARTNER</span></div>
+      <div style="font-family:var(--font-heading);font-weight:900;color:var(--ink);font-size:0.875rem;letter-spacing:0.04em;text-align:center;line-height:1.2;">ACCA<br><span style="font-family:var(--font-mono);font-size:0.625rem;font-weight:600;letter-spacing:0.1em;color:var(--ink-soft);">MEMBER</span></div>
+      <div style="font-family:var(--font-heading);font-weight:900;color:var(--ink);font-size:0.875rem;letter-spacing:0.04em;text-align:center;line-height:1.2;">★ 4.9 / 5<br><span style="font-family:var(--font-mono);font-size:0.625rem;font-weight:600;letter-spacing:0.1em;color:var(--ink-soft);">GOOGLE</span></div>
     </div>
   </div>
 </section>
 
+<!-- ================= CTA ================= -->
 <section class="cta-band">
   <div class="container">
-    <h2>Want to Work With Us?</h2>
-    <p>We're always happy to take a look, give you an honest opinion, and price it fair.</p>
-    <a href="quote.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    <div>
+      <span class="eyebrow" style="color:var(--orange);">05 / Get Started</span>
+      <h2>Want To Work With Us?</h2>
+      <p>We're always happy to take a look, give you an honest opinion, and price it fair.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0.875rem;">
+      <a href="quote.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+      <a href="tel:[Phone Number]" class="btn btn-outline-white btn-lg">Call [Phone Number]</a>
+    </div>
   </div>
 </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo-name" style="color:#fff;font-size:1.25rem;">[Your Company Name]</div>
-        <div class="logo-tag" style="color:rgba(255,255,255,0.7);">Heating · Cooling · Comfort</div>
-        <p style="margin-top:1rem;color:rgba(255,255,255,0.7);">Locally owned HVAC company serving [Service Region] since [Year Founded]. Honest work, fair pricing, and a guarantee behind every job.</p>
-        <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Licensed & Insured · License #[License #]</p>
+        <div class="logo-name">[Your Company Name]</div>
+        <div class="logo-tag">Heating &middot; Cooling &middot; Air Quality</div>
+        <p style="margin-top:1rem;color:rgba(255,255,255,0.7);max-width:36ch;">Family-owned HVAC company serving [Service Region] since [Year Founded]. Honest work, fair pricing, and a guarantee behind every job.</p>
+        <p style="font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:1rem;">Lic #[License #] &middot; Insured &middot; Bonded</p>
       </div>
-      <div><h4>Quick Links</h4><ul>
-        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li>
-        <li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li>
-        <li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul></div>
-      <div><h4>Services</h4><ul>
-        <li><a href="services.html#service-one">Service One</a></li>
-        <li><a href="services.html#service-two">Service Two</a></li>
-        <li><a href="services.html#service-three">Service Three</a></li>
-        <li><a href="services.html#service-four">Service Four</a></li>
-        <li><a href="services.html#service-five">Service Five</a></li>
-        <li><a href="services.html#service-six">Service Six</a></li>
-      </ul></div>
-      <div><h4>Contact</h4><ul>
-        <li><a href="tel:[Phone Number]">[Phone Number]</a></li>
-        <li><a href="mailto:[Email]">[Email]</a></li>
-        <li>[Street Address]<br>[City, State ZIP]</li>
-        <li style="margin-top:0.75rem;font-size:0.875rem;color:rgba(255,255,255,0.7);">Mon–Fri 7am–7pm<br>Sat 8am–4pm<br>Sun Emergency Only</li>
-      </ul></div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#ac-repair">AC Repair</a></li>
+          <li><a href="services.html#heating-repair">Furnace Repair</a></li>
+          <li><a href="services.html#ac-install">AC Installation</a></li>
+          <li><a href="services.html#furnace-install">Furnace &amp; Heat Pump</a></li>
+          <li><a href="services.html#air-quality">Indoor Air &amp; Ducts</a></li>
+          <li><a href="services.html#maintenance">Maintenance Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li><a href="tel:[Phone Number]" style="font-family:var(--font-heading);font-weight:700;color:#fff;font-size:1.125rem;">[Phone Number]</a></li>
+          <li><a href="mailto:[Email]">[Email]</a></li>
+          <li>[Street Address]<br>[City, State ZIP]</li>
+          <li style="margin-top:0.75rem;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Mon&ndash;Fri 7a&ndash;7p &middot; Sat 8a&ndash;4p<br>24/7 Emergency Dispatch</li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
       <div class="social-row">
-        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="Google"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11h-10v2.5h5.7c-.5 2.8-2.8 4.5-5.7 4.5-3.4 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2c1.5 0 2.9.6 4 1.5l1.9-1.9C16 3.6 14.1 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.7-3.6 8.7-8.7 0-.4 0-.9-.1-1.3z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Google"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11h-10v2.5h5.7c-.5 2.8-2.8 4.5-5.7 4.5-3.4 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2c1.5 0 2.9.6 4 1.5l1.9-1.9C16 3.6 14.1 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.7-3.6 8.7-8.7 0-.4 0-.9-.1-1.3z"/></svg></a>
       </div>
-      <div style="font-size:0.8125rem;">© <span data-year>2026</span> [Your Company Name]. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+      <div>&copy; <span data-year>2026</span> [Your Company Name] &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div>
     </div>
   </div>
 </footer>

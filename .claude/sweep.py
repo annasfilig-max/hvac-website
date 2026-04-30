@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found | [Your Company Name] — HVAC Services in [City, State ZIP]</title>
-<meta name="description" content="That page doesn't exist — but we're still here. Head back to the [Your Company Name] home page or pick a popular link below.">
-<link rel="canonical" href="[https://yourdomain.com]/404.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Page Not Found | [Your Company Name]">
-<meta property="og:description" content="That page doesn't exist.">
-<meta property="og:url" content="[https://yourdomain.com]/404.html">
-<meta property="og:image" content="https://yourdomain.com/assets/images/hero.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="robots" content="noindex">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config = { corePlugins: { preflight: false } }</script>
-<link rel="stylesheet" href="assets/css/styles.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"[https://yourdomain.com]/index.html"},{"@type":"ListItem","position":2,"name":"Not Found","item":"[https://yourdomain.com]/404.html"}]}
-</script>
-</head>
-<body>
-<!-- ================= JT MARKETING PROMO BANNER ================= -->
+"""Sweep all HVAC pages: inject promo banner, replace header/mobile-menu/footer
+with the new design system blocks, drop blog links, and remove the old Google
+Fonts <link> (the new fonts come from @import in styles.css)."""
+import re, os, sys
+
+BASE = os.path.join(os.path.dirname(__file__), '..')
+
+PROMO = '''<!-- ================= JT MARKETING PROMO BANNER ================= -->
 <div id="jtm-promo-banner" role="note" aria-label="Preview by JT Marketing">
   <span class="jtm-promo-inner">
     <svg class="jtm-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.4 20 12 16.7 6.6 20 8 13.4 3 9l6.4-.7L12 2z"/></svg>
@@ -33,7 +16,28 @@
   <button type="button" class="jtm-close" aria-label="Dismiss" onclick="this.parentElement.style.display='none'">&times;</button>
 </div>
 
-<!-- ================= HEADER ================= -->
+'''
+
+def header_block(current_page):
+    """current_page is one of: home, about, services, service-areas, gallery,
+    testimonials, faq, contact, quote, privacy, terms, 404."""
+    nav_items = [
+        ('index.html', 'Home', 'home'),
+        ('about.html', 'About', 'about'),
+        ('services.html', 'Services', 'services'),
+        ('service-areas.html', 'Service Areas', 'service-areas'),
+        ('gallery.html', 'Gallery', 'gallery'),
+        ('testimonials.html', 'Reviews', 'testimonials'),
+        ('faq.html', 'FAQ', 'faq'),
+        ('contact.html', 'Contact', 'contact'),
+    ]
+    lis = []
+    for href, label, key in nav_items:
+        cur = ' aria-current="page"' if key == current_page else ''
+        lis.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
+    nav_main = ''.join(lis)
+    nav_mobile = ''.join(f'<li><a href="{href}">{label}</a></li>' for href, label, _ in nav_items)
+    return f'''<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="[Your Company Name] home">
@@ -41,7 +45,7 @@
       <span class="logo-tag">Heating &middot; Cooling &middot; Air Quality</span>
     </a>
     <nav class="nav-main" aria-label="Primary">
-      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+      <ul>{nav_main}</ul>
     </nav>
     <div class="header-cta">
       <a href="tel:[Phone Number]" class="header-phone">
@@ -64,41 +68,16 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
-  <nav aria-label="Mobile primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <nav aria-label="Mobile primary"><ul>{nav_mobile}</ul></nav>
   <div class="mobile-menu-footer">
     <a href="tel:[Phone Number]" class="btn btn-outline-white">Call [Phone Number]</a>
     <a href="quote.html" class="btn btn-primary">Free Quote</a>
   </div>
 </div>
 
-<main id="main">
+'''
 
-<section class="err-wrap">
-  <div class="container" style="max-width:640px;">
-    <div style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:1.5rem;">Error 404 &middot; Page Not Found</div>
-    <div class="big" style="color:var(--ink);">4<span style="color:var(--orange);">0</span>4</div>
-    <h1 style="margin-top:1.5rem;text-transform:uppercase;">We Can't Find<br><em style="color:var(--orange);font-style:normal;">That Page.</em></h1>
-    <p style="font-size:1.125rem;color:var(--ink-soft);max-width:38ch;margin:1rem auto 0;">The link might be broken, or the page may have moved. No big deal &mdash; here's how to get back on track.</p>
-    <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;">
-      <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
-      <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
-    </div>
-    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-border);">
-      <h2 style="font-size:1.125rem;">Popular Pages</h2>
-      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.5rem;margin-top:1rem;">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="service-areas.html">Service Areas</a></li>
-        <li><a href="quote.html">Request a Quote</a></li>
-        <li><a href="testimonials.html">Customer Reviews</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
+FOOTER = '''<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -152,7 +131,76 @@
     </div>
   </div>
 </footer>
+'''
 
-<script src="assets/js/main.js" defer></script>
-</body>
-</html>
+PAGE_KEYS = {
+    'index.html': 'home',
+    'about.html': 'about',
+    'services.html': 'services',
+    'service-areas.html': 'service-areas',
+    'gallery.html': 'gallery',
+    'testimonials.html': 'testimonials',
+    'faq.html': 'faq',
+    'contact.html': 'contact',
+    'quote.html': 'contact',
+    'privacy.html': '',
+    'terms.html': '',
+    '404.html': '',
+}
+
+def sweep(filename):
+    path = os.path.join(BASE, filename)
+    with open(path, 'r', encoding='utf-8') as f:
+        html = f.read()
+
+    key = PAGE_KEYS.get(filename, '')
+
+    # 1. drop the legacy Google Fonts <link> (Inter + Space Grotesk) — fonts are now in styles.css @import
+    html = re.sub(
+        r'<link rel="preconnect" href="https://fonts\.googleapis\.com"[^>]*>\s*'
+        r'<link rel="preconnect" href="https://fonts\.gstatic\.com"[^>]*>\s*'
+        r'<link href="https://fonts\.googleapis\.com/css2[^"]*"[^>]*>\s*',
+        '', html, flags=re.S)
+    html = re.sub(
+        r'<link rel="preconnect" href="https://fonts\.googleapis\.com"[^>]*>\s*<link rel="preconnect" href="https://fonts\.gstatic\.com"[^>]*>\s*<link href="https://fonts\.googleapis\.com/css2[^"]*"[^>]*>',
+        '', html, flags=re.S)
+
+    # 2. remove skip-link <a> (CSS already hides it)
+    html = re.sub(r'<a href="#main" class="skip-link">[^<]*</a>\s*', '', html)
+
+    # 3. replace header (open) through mobile-menu close.
+    #    Header opens with <header class="site-header"> and mobile-menu closes with </div> followed by blank line + <main
+    new_chrome = PROMO + header_block(key)
+    html = re.sub(
+        r'<header class="site-header">.*?</div>\s*\n\s*(?=<main)',
+        new_chrome,
+        html, count=1, flags=re.S)
+
+    # also handle case where the JTM banner was already injected (from earlier index.html edit)
+    html = re.sub(
+        r'<!-- ================= JT MARKETING PROMO BANNER ================= -->.*?<!-- ================= MOBILE MENU ================= -->.*?</div>\s*\n\s*(?=<main)',
+        new_chrome,
+        html, count=1, flags=re.S)
+
+    # 4. replace footer through </footer>
+    html = re.sub(
+        r'<footer class="site-footer">.*?</footer>',
+        FOOTER.rstrip(),
+        html, count=1, flags=re.S)
+
+    # 5. nuke every blog reference left over
+    html = re.sub(r'<li><a href="blog\.html">Blog</a></li>\s*', '', html)
+    html = re.sub(r'<li><a href="blog/post-\d+\.html"[^>]*>[^<]*</a></li>\s*', '', html)
+    html = re.sub(r'href="blog\.html"', 'href="services.html"', html)
+
+    with open(path, 'w', encoding='utf-8', newline='\n') as f:
+        f.write(html)
+
+    return path
+
+if __name__ == '__main__':
+    files = [f for f in os.listdir(BASE) if f.endswith('.html')]
+    for f in sorted(files):
+        sweep(f)
+        print(f'  swept {f}')
+    print(f'\n{len(files)} files swept.')

@@ -13,9 +13,6 @@
 <meta property="og:image" content="https://yourdomain.com/assets/images/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config = { corePlugins: { preflight: false } }</script>
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -36,206 +33,385 @@
 </script>
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to content</a>
+<!-- ================= JT MARKETING PROMO BANNER ================= -->
+<div id="jtm-promo-banner" role="note" aria-label="Preview by JT Marketing">
+  <span class="jtm-promo-inner">
+    <svg class="jtm-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.4 20 12 16.7 6.6 20 8 13.4 3 9l6.4-.7L12 2z"/></svg>
+    <span class="jtm-promo-text">This site could be yours.</span>
+    <span class="jtm-promo-sep" aria-hidden="true"></span>
+    <span class="jtm-promo-credit">Built by <b>JT Marketing</b></span>
+  </span>
+  <button type="button" class="jtm-close" aria-label="Dismiss" onclick="this.parentElement.style.display='none'">&times;</button>
+</div>
 
-<header class="site-header"><div class="container header-inner">
-  <a href="index.html" class="logo" aria-label="[Your Company Name] home"><span class="logo-name">[Your Company Name]</span><span class="logo-tag">Heating · Cooling · Comfort</span></a>
-  <nav class="nav-main" aria-label="Primary"><ul>
-    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-    <li><a href="services.html" aria-current="page">Services</a></li><li><a href="service-areas.html">Service Areas</a></li>
-    <li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li>
-    <li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
-  </ul></nav>
-  <div class="header-cta">
-    <a href="tel:[Phone Number]" class="header-phone"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>[Phone Number]</a>
-    <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="[Your Company Name] home">
+      <span class="logo-name">[Your Company Name]</span>
+      <span class="logo-tag">Heating &middot; Cooling &middot; Air Quality</span>
+    </a>
+    <nav class="nav-main" aria-label="Primary">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" aria-current="page">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:[Phone Number]" class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        [Phone Number]
+      </a>
+      <a href="quote.html" class="btn btn-primary">Free Quote</a>
+    </div>
+    <button class="hamburger" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
-  <button class="hamburger" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-</div></header>
+</header>
 
+<!-- ================= MOBILE MENU ================= -->
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
-  <div class="mobile-menu-head"><span class="logo-name">[Your Company Name]</span>
-    <button class="hamburger" data-menu-close aria-label="Close menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="mobile-menu-head">
+    <span class="logo-name">[Your Company Name]</span>
+    <button class="hamburger" data-menu-close aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
-  <nav aria-label="Mobile primary"><ul>
-    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li>
-    <li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li>
-    <li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
-  </ul></nav>
-  <div class="mobile-menu-footer"><a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
+  <nav aria-label="Mobile primary"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <div class="mobile-menu-footer">
+    <a href="tel:[Phone Number]" class="btn btn-outline-white">Call [Phone Number]</a>
+    <a href="quote.html" class="btn btn-primary">Free Quote</a>
+  </div>
 </div>
 
 <main id="main">
 
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> › Services</div>
-    <h1>Our Services</h1>
-    <p style="color:rgba(255,255,255,0.85);max-width:640px;margin:0.5rem auto 0;">Six core services, one standard. Flat-rate pricing, clean work, and a guarantee behind it.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Services</div>
+    <h1>Services<br><em style="color:var(--orange);font-style:normal;">Done Right.</em></h1>
+    <p style="color:rgba(255,255,255,0.78);max-width:580px;margin:1rem 0 0;font-size:1.0625rem;">Six core services. One standard. Flat-rate pricing, clean work, and a workmanship guarantee on every job we do.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="container" style="max-width:800px;">
-    <p style="font-size:1.125rem;">Whether you're scheduling routine care, planning an upgrade, or dealing with something that stopped working the way it should, we've got the tools and the technicians to handle it. Every visit starts with a clear diagnosis and a flat-rate quote — so you know what you're paying before any work begins.</p>
-    <p style="font-size:1.125rem;">Below is a breakdown of the six services homeowners across [Service Region] call us for most. Tap "Get a Quote" on any of them to lock in a visit.</p>
-  </div>
-</section>
-
-<section class="section section-alt">
+<!-- Quick service nav grid (photo cards, anchor links) -->
+<section class="section" style="padding:3rem 0;">
   <div class="container">
-    <article id="service-one" class="service-block">
-      <div class="sb-img fade-in"><img src="assets/images/service-1.jpg" alt="Technician inspecting ductwork insulation in attic"></div>
-      <div class="fade-in">
-        <span class="eyebrow">Service One</span>
-        <h2>Service One</h2>
-        <p class="text-muted">A homeowner-friendly paragraph describing what this service includes, who it's for, and why it matters. Two or three sentences. Lead with the outcome your customer cares about.</p>
-        <p class="text-muted">A second paragraph can walk through typical timelines, what to expect on service day, and how we keep the work clean from start to finish.</p>
-        <strong>What's included:</strong>
-        <ul class="feature-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion one</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion two</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion three</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion four</li>
-        </ul>
-        <a href="quote.html" class="btn btn-primary mt-2">Get a Quote</a>
-      </div>
-    </article>
-
-    <article id="service-two" class="service-block reverse">
-      <div class="sb-img fade-in"><img src="assets/images/service-2.jpg" alt="Technician installing ductless mini-split unit in living room"></div>
-      <div class="fade-in">
-        <span class="eyebrow">Service Two</span>
-        <h2>Service Two</h2>
-        <p class="text-muted">A homeowner-friendly paragraph describing this service. Keep it benefit-forward — what the customer gets, not just what you do.</p>
-        <p class="text-muted">Add a second paragraph with specifics: turnaround, parts used, warranty coverage, or what makes your approach different.</p>
-        <strong>What's included:</strong>
-        <ul class="feature-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion one</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion two</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion three</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion four</li>
-        </ul>
-        <a href="quote.html" class="btn btn-primary mt-2">Get a Quote</a>
-      </div>
-    </article>
-
-    <article id="service-three" class="service-block">
-      <div class="sb-img fade-in"><img src="assets/images/service-3.jpg" alt="Technician showing smart thermostat options to homeowner"></div>
-      <div class="fade-in">
-        <span class="eyebrow">Service Three</span>
-        <h2>Service Three</h2>
-        <p class="text-muted">A homeowner-friendly paragraph explaining this service. Plain language, no jargon.</p>
-        <p class="text-muted">Add a second paragraph with the specifics that matter to your customers most.</p>
-        <strong>What's included:</strong>
-        <ul class="feature-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion one</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion two</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion three</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion four</li>
-        </ul>
-        <a href="quote.html" class="btn btn-primary mt-2">Get a Quote</a>
-      </div>
-    </article>
-
-    <article id="service-four" class="service-block reverse">
-      <div class="sb-img fade-in"><img src="assets/images/service-4.jpg" alt="Technician performing maintenance tune-up on outdoor AC unit"></div>
-      <div class="fade-in">
-        <span class="eyebrow">Service Four</span>
-        <h2>Service Four</h2>
-        <p class="text-muted">A homeowner-friendly paragraph describing what this service delivers and why it's worth scheduling.</p>
-        <p class="text-muted">A second paragraph can cover process, typical duration, and the guarantee that backs it.</p>
-        <strong>What's included:</strong>
-        <ul class="feature-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion one</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion two</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion three</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion four</li>
-        </ul>
-        <a href="quote.html" class="btn btn-primary mt-2">Get a Quote</a>
-      </div>
-    </article>
-
-    <article id="service-five" class="service-block">
-      <div class="sb-img fade-in"><img src="assets/images/service-5.jpg" alt="Newly installed residential AC condenser on concrete pad"></div>
-      <div class="fade-in">
-        <span class="eyebrow">Service Five</span>
-        <h2>Service Five</h2>
-        <p class="text-muted">A homeowner-friendly paragraph for the fifth service. Tell them the outcome first, then the process.</p>
-        <p class="text-muted">A second paragraph adds the confidence cues — warranty, training, references, or photos of past work.</p>
-        <strong>What's included:</strong>
-        <ul class="feature-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion one</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion two</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion three</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion four</li>
-        </ul>
-        <a href="quote.html" class="btn btn-primary mt-2">Get a Quote</a>
-      </div>
-    </article>
-
-    <article id="service-six" class="service-block reverse">
-      <div class="sb-img fade-in"><img src="assets/images/service-6.jpg" alt="Technician on ladder inspecting ductwork and air handler"></div>
-      <div class="fade-in">
-        <span class="eyebrow">Service Six</span>
-        <h2>Service Six</h2>
-        <p class="text-muted">A homeowner-friendly paragraph for the sixth service. Keep it short and specific.</p>
-        <p class="text-muted">A second paragraph can invite the reader to book, call, or request a quote — end with momentum.</p>
-        <strong>What's included:</strong>
-        <ul class="feature-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion one</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion two</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion three</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Feature or inclusion four</li>
-        </ul>
-        <a href="quote.html" class="btn btn-primary mt-2">Get a Quote</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="text-center mb-2">
-      <span class="eyebrow">Why Homeowners Choose Us</span>
-      <h2>Work That Holds Up — So You Don't Have to Call Twice.</h2>
-    </div>
-    <div class="grid-3 mt-3">
-      <div class="card"><div class="icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><h3>Flat-Rate Pricing</h3><p class="text-muted">Know the number before the work starts. No mystery charges on the invoice.</p></div>
-      <div class="card"><div class="icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Same-Day Availability</h3><p class="text-muted">Most visits booked by noon are on the schedule the same day.</p></div>
-      <div class="card"><div class="icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Workmanship Guarantee</h3><p class="text-muted">If something we did isn't right, we come back and make it right.</p></div>
-      <div class="card"><div class="icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h3>Background-Checked Techs</h3><p class="text-muted">Every technician is trained, background-checked, and uniformed.</p></div>
+    <div class="grid-3" style="gap:0.75rem;">
+      <a href="#ac-repair" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('assets/images/service-1.jpg');"></div>
+        <span class="svc-num">01 / Cooling</span>
+        <h3 style="font-size:1.25rem;">AC Repair</h3>
+      </a>
+      <a href="#heating-repair" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('assets/images/service-2.jpg');"></div>
+        <span class="svc-num">02 / Heating</span>
+        <h3 style="font-size:1.25rem;">Furnace Repair</h3>
+      </a>
+      <a href="#ac-install" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('assets/images/service-3.jpg');"></div>
+        <span class="svc-num">03 / Install</span>
+        <h3 style="font-size:1.25rem;">AC Installation</h3>
+      </a>
+      <a href="#furnace-install" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('assets/images/service-4.jpg');"></div>
+        <span class="svc-num">04 / Install</span>
+        <h3 style="font-size:1.25rem;">Furnace &amp; Heat Pump</h3>
+      </a>
+      <a href="#air-quality" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('assets/images/service-5.jpg');"></div>
+        <span class="svc-num">05 / Air Quality</span>
+        <h3 style="font-size:1.25rem;">Indoor Air &amp; Ducts</h3>
+      </a>
+      <a href="#maintenance" class="svc-card" style="aspect-ratio:5/3;">
+        <div class="svc-img" style="background-image:url('assets/images/service-6.jpg');"></div>
+        <span class="svc-num">06 / Plans</span>
+        <h3 style="font-size:1.25rem;">Maintenance Plans</h3>
+      </a>
     </div>
   </div>
 </section>
 
+<!-- ================= SERVICE 01 — AC REPAIR ================= -->
+<section id="ac-repair" class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">01 / Cooling</span>
+      <h2>AC Repair —<br>Same-Day, Every Brand.</h2>
+      <span class="meta">Diagnosis &middot; Repair &middot; Recharge</span>
+    </div>
+    <div class="grid-2">
+      <div><img src="assets/images/service-1.jpg" alt="Technician diagnosing residential AC condenser"></div>
+      <div>
+        <p class="lead">When the AC quits, you don't want a sales pitch — you want it cold again. We diagnose every brand, carry common parts on the truck, and most repairs are done the same visit.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Full system diagnostic &amp; load test</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Refrigerant leak check &amp; recharge (R-410A / R-32)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Capacitor, contactor, fan motor &amp; coil work</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Honest repair-vs-replace recommendation</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Schedule a Visit</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 02 — FURNACE REPAIR ================= -->
+<section id="heating-repair" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">02 / Heating</span>
+      <h2>Furnace Repair —<br>Up When You're Not.</h2>
+      <span class="meta">Gas &middot; Electric &middot; Oil</span>
+    </div>
+    <div class="grid-2">
+      <div style="order:2;"><img src="assets/images/service-2.jpg" alt="Technician servicing residential gas furnace"></div>
+      <div style="order:1;">
+        <p class="lead">No heat at 2 a.m.? We answer. 24/7 emergency dispatch across [Service Region], with parts in the truck for the fixes that come up the most.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Ignitor, flame sensor &amp; pilot diagnostics</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Blower motor, belt &amp; bearing service</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Heat exchanger inspection &amp; CO testing</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Thermostat, control board &amp; wiring repair</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Schedule a Visit</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 03 — AC INSTALLATION ================= -->
+<section id="ac-install" class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">03 / Install</span>
+      <h2>AC Installation —<br>Sized For Your Home.</h2>
+      <span class="meta">Manual J Load Calc &middot; 10-Yr Warranty</span>
+    </div>
+    <div class="grid-2">
+      <div><img src="assets/images/service-3.jpg" alt="New AC condenser installation on concrete pad"></div>
+      <div>
+        <p class="lead">Right-sized systems, clean install, real warranties we stand behind. We don't push the biggest unit — we install the right one.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Manual J load calculation &mdash; sized to your square footage</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Lennox, Trane, Carrier, Goodman, Daikin &amp; Mitsubishi</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Pad, line set, electrical, thermostat &mdash; included</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 10-year parts &amp; labor warranty, financing available</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 04 — FURNACE INSTALL ================= -->
+<section id="furnace-install" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">04 / Install</span>
+      <h2>Furnace &amp; Heat Pump<br>Installation.</h2>
+      <span class="meta">High-Efficiency &middot; Rebate-Ready</span>
+    </div>
+    <div class="grid-2">
+      <div style="order:2;"><img src="assets/images/service-4.jpg" alt="Technician installing high-efficiency gas furnace"></div>
+      <div style="order:1;">
+        <p class="lead">High-efficiency furnaces and heat pumps sized to your home — not what's on the truck this week. We pull the permits, run the gas, and clean up after.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 95-98% AFUE gas furnaces &amp; cold-climate heat pumps</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Permits, gas line, venting, condensate &mdash; handled</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Federal &amp; utility rebate paperwork done for you</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 10-year warranty &amp; lifetime workmanship guarantee</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 05 — INDOOR AIR ================= -->
+<section id="air-quality" class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">05 / Air Quality</span>
+      <h2>Indoor Air &amp; Ducts —<br>Cleaner, Quieter, Drier.</h2>
+      <span class="meta">Filtration &middot; Humidity &middot; UV</span>
+    </div>
+    <div class="grid-2">
+      <div><img src="assets/images/service-5.jpg" alt="Whole-home air filtration and duct system"></div>
+      <div>
+        <p class="lead">Most homes have a duct problem, an allergy problem, or both. We measure, fix, and seal — no $99 "duct cleaning" gimmicks.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">What's Included</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Whole-home media filtration (MERV 11&ndash;16)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Steam &amp; bypass humidifiers, whole-home dehumidifiers</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> UV-C &amp; bipolar ionization air purifiers</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Full duct cleaning, sealing &amp; rebalancing</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Schedule an Audit</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE 06 — MAINTENANCE ================= -->
+<section id="maintenance" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">06 / Plans</span>
+      <h2>Maintenance Plans —<br>Set It &amp; Forget It.</h2>
+      <span class="meta">Two Visits A Year &middot; Priority Dispatch</span>
+    </div>
+    <div class="grid-2">
+      <div style="order:2;"><img src="assets/images/service-6.jpg" alt="Technician performing seasonal HVAC tune-up"></div>
+      <div style="order:1;">
+        <p class="lead">Most breakdowns aren't surprises — they're missed maintenance. Two visits a year, priority dispatch, no overtime fees, cancel anytime.</p>
+        <strong style="display:block;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:1.5rem;margin-bottom:0.5rem;">Member Benefits</strong>
+        <ul class="feature-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Spring AC + Fall furnace tune-up (21-point each)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Front-of-the-line dispatch &mdash; you skip the queue</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> 15% off all repairs, no overtime fees ever</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel anytime &mdash; no contracts, no penalties</li>
+        </ul>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.75rem;">
+          <a href="quote.html" class="btn btn-primary">Join The Plan</a>
+          <a href="tel:[Phone Number]" class="btn btn-secondary">Call [Phone Number]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="idx">07 / Why Us</span>
+      <h2>Work That<br>Holds Up.</h2>
+      <span class="meta">No Calls Twice</span>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
+        <h3>Flat-Rate Pricing</h3>
+        <p style="color:var(--ink-soft);">Know the number before the work starts. The invoice matches the quote &mdash; that's the deal.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Same-Day Service</h3>
+        <p style="color:var(--ink-soft);">Most visits booked by noon are on the schedule that afternoon. 24/7 for emergencies.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Workmanship Guarantee</h3>
+        <p style="color:var(--ink-soft);">If something we did isn't right, one call brings us back. Lifetime workmanship guarantee on installs.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3>Vetted Technicians</h3>
+        <p style="color:var(--ink-soft);">Background-checked, drug-tested, NATE-certified, and uniformed. Never sub-contracted.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2 4 4 8-8 4 4"/></svg></div>
+        <h3>Zero Pressure</h3>
+        <p style="color:var(--ink-soft);">No commission-driven sales scripts. We tell you what we'd do in our own home, then leave.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Real People Answer</h3>
+        <p style="color:var(--ink-soft);">No phone trees, no offshore call centers. Local dispatchers who know the techs by name.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
 <section class="cta-band">
   <div class="container">
-    <h2>Need It Fixed Today?</h2>
-    <p>Most same-day visits are booked by noon. Tell us what's going on and we'll lock in a window.</p>
-    <a href="quote.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    <div>
+      <span class="eyebrow" style="color:var(--orange);">08 / Get Started</span>
+      <h2>Need It Fixed Today?</h2>
+      <p>Most same-day visits are booked by noon. Tell us what's going on and we'll lock in a window.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0.875rem;">
+      <a href="tel:[Phone Number]" class="btn btn-primary btn-lg">Call [Phone Number]</a>
+      <a href="quote.html" class="btn btn-outline-white btn-lg">Request a Visit</a>
+    </div>
   </div>
 </section>
 
 </main>
 
-<footer class="site-footer"><div class="container">
-  <div class="footer-grid">
-    <div><div class="logo-name" style="color:#fff;font-size:1.25rem;">[Your Company Name]</div><div class="logo-tag" style="color:rgba(255,255,255,0.7);">Heating · Cooling · Comfort</div><p style="margin-top:1rem;color:rgba(255,255,255,0.7);">Locally owned HVAC company serving [Service Region] since [Year Founded]. Honest work, fair pricing, and a guarantee behind every job.</p><p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);">Licensed & Insured · License #[License #]</p></div>
-    <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="service-areas.html">Service Areas</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Services</h4><ul><li><a href="services.html#service-one">Service One</a></li><li><a href="services.html#service-two">Service Two</a></li><li><a href="services.html#service-three">Service Three</a></li><li><a href="services.html#service-four">Service Four</a></li><li><a href="services.html#service-five">Service Five</a></li><li><a href="services.html#service-six">Service Six</a></li></ul></div>
-    <div><h4>Contact</h4><ul><li><a href="tel:[Phone Number]">[Phone Number]</a></li><li><a href="mailto:[Email]">[Email]</a></li><li>[Street Address]<br>[City, State ZIP]</li><li style="margin-top:0.75rem;font-size:0.875rem;color:rgba(255,255,255,0.7);">Mon–Fri 7am–7pm<br>Sat 8am–4pm<br>Sun Emergency Only</li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <div class="social-row">
-      <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-      <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-      <a href="#" aria-label="Google"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11h-10v2.5h5.7c-.5 2.8-2.8 4.5-5.7 4.5-3.4 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2c1.5 0 2.9.6 4 1.5l1.9-1.9C16 3.6 14.1 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.7-3.6 8.7-8.7 0-.4 0-.9-.1-1.3z"/></svg></a>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo-name">[Your Company Name]</div>
+        <div class="logo-tag">Heating &middot; Cooling &middot; Air Quality</div>
+        <p style="margin-top:1rem;color:rgba(255,255,255,0.7);max-width:36ch;">Family-owned HVAC company serving [Service Region] since [Year Founded]. Honest work, fair pricing, and a guarantee behind every job.</p>
+        <p style="font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:1rem;">Lic #[License #] &middot; Insured &middot; Bonded</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Reviews</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#ac-repair">AC Repair</a></li>
+          <li><a href="services.html#heating-repair">Furnace Repair</a></li>
+          <li><a href="services.html#ac-install">AC Installation</a></li>
+          <li><a href="services.html#furnace-install">Furnace &amp; Heat Pump</a></li>
+          <li><a href="services.html#air-quality">Indoor Air &amp; Ducts</a></li>
+          <li><a href="services.html#maintenance">Maintenance Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li><a href="tel:[Phone Number]" style="font-family:var(--font-heading);font-weight:700;color:#fff;font-size:1.125rem;">[Phone Number]</a></li>
+          <li><a href="mailto:[Email]">[Email]</a></li>
+          <li>[Street Address]<br>[City, State ZIP]</li>
+          <li style="margin-top:0.75rem;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Mon&ndash;Fri 7a&ndash;7p &middot; Sat 8a&ndash;4p<br>24/7 Emergency Dispatch</li>
+        </ul>
+      </div>
     </div>
-    <div style="font-size:0.8125rem;">© <span data-year>2026</span> [Your Company Name]. All rights reserved. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
+    <div class="footer-bottom">
+      <div class="social-row">
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Google"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11h-10v2.5h5.7c-.5 2.8-2.8 4.5-5.7 4.5-3.4 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2c1.5 0 2.9.6 4 1.5l1.9-1.9C16 3.6 14.1 3 12 3 7 3 3 7 3 12s4 9 9 9c5.2 0 8.7-3.6 8.7-8.7 0-.4 0-.9-.1-1.3z"/></svg></a>
+      </div>
+      <div>&copy; <span data-year>2026</span> [Your Company Name] &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div>
+    </div>
   </div>
-</div></footer>
+</footer>
 
 <script src="assets/js/main.js" defer></script>
 </body>
